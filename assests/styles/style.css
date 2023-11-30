@@ -14,6 +14,8 @@
 
 :root {
 	--color-primary: #6dd5fa;
+	--color-primary-dark: #1565c0;
+	--color-secondary: #b92b27;
 	--color-black: #000000;
 	--color-white: #ffffff;
 
@@ -38,14 +40,13 @@ ul {
 
 html {
 	font-size: 62.5%;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 body {
 	font-family: "Poppins", sans-serif;
 	height: 100vh;
-
-	overflow: hidden;
+	overflow-x: hidden;
 	background: linear-gradient(to right, var(--color-primary), 75%, var(--color-white));
 	background-repeat: no-repeat;
 
@@ -205,6 +206,91 @@ body {
 	margin: 0 !important;
 }
 
+/* Section Hero */
+
+.section-hero {
+	display: flex;
+	padding: 2rem 0;
+}
+
+.image-slider {
+	padding: 3px;
+	width: 50%;
+	/* height: 100%; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.image-slider img {
+	max-width: 100%;
+	max-height: 100%;
+	aspect-ratio: 12/10;
+}
+
+.text-box {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	padding: var(--padding-small);
+	margin-bottom: 8rem;
+}
+
+.text-box h1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	font-weight: 600;
+	font-size: 7rem;
+	letter-spacing: 1px;
+}
+
+.text-box h1 span {
+	display: inline-block;
+	color: transparent;
+	background: linear-gradient(to right, var(--color-secondary), 35%, var(--color-black));
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
+.text-box h1 span:last-child {
+	margin-top: -3rem;
+}
+
+.text-box p {
+	font-size: 1.8rem;
+	font-weight: 600;
+	letter-spacing: 2.5px;
+	color: transparent;
+	background: linear-gradient(to right, var(--color-secondary), var(--color-primary-dark));
+	background-clip: text;
+	-webkit-background-clip: text;
+	margin: var(--margin-small) 0;
+}
+
+.text-box a:link,
+.text-box a:visited {
+	background-color: var(--color-secondary);
+	color: var(--color-white);
+	font-size: 2.2rem;
+	padding: 1.2rem 2rem;
+	margin-top: var(--margin-medium);
+	border-radius: 11px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	transition: var(--transition-3s);
+}
+
+.text-box a:hover,
+.text-box a:active {
+	background-color: var(--color-primary-dark);
+}
+
 /* Media Queries */
 
 /* 1088px */
@@ -222,9 +308,65 @@ body {
 	.nav-btn-container {
 		display: flex;
 	}
+
+	/* header section */
+	.image-slider img {
+		max-width: 95%;
+		max-height: 95%;
+		aspect-ratio: 12/10;
+	}
+
+	.text-box h1 {
+		font-size: 6rem;
+	}
+
+	.text-box p {
+		font-size: 1.6rem;
+		letter-spacing: 1.6px;
+	}
 }
 
-/* 1088px */
+/* 912px */
+@media (max-width: 57em) {
+	/* hero section */
+
+	.section-hero {
+		flex-direction: column-reverse;
+	}
+
+	.image-slider img {
+		max-width: 65%;
+		max-height: 65%;
+		aspect-ratio: 12/10;
+	}
+
+	.image-slider {
+		width: 100%;
+	}
+
+	.text-box {
+		width: 100%;
+		align-items: center;
+		margin-bottom: 4rem;
+	}
+
+	.text-box h1 {
+		align-items: center;
+	}
+
+	.text-box p {
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	.text-box a:link,
+	.text-box a:visited {
+		font-size: 1.8rem;
+		padding: 1rem 1.8rem;
+	}
+}
+
+/* 512px */
 @media (max-width: 32em) {
 	/* navigation */
 
@@ -232,9 +374,45 @@ body {
 		margin: var(--margin-small);
 		margin-bottom: var(--margin-large);
 	}
+
+	/* header section */
+
+	.image-slider img {
+		max-width: 90%;
+		max-height: 90%;
+		aspect-ratio: 12/10;
+	}
+
+	.text-box h1 {
+		font-size: 4.6rem;
+	}
+
+	.text-box h1 span:last-child {
+		margin-top: -2rem;
+	}
+
+	.text-box p {
+		font-size: 1.6rem;
+	}
 }
 
-/* 1088px */
+/* 384px */
+@media (max-width: 24em) {
+	/* header */
+	.text-box h1 {
+		font-size: 3.4rem;
+	}
+
+	.text-box h1 span:last-child {
+		margin-top: -1.2rem;
+	}
+
+	.text-box p {
+		font-size: 1.6rem;
+	}
+}
+
+/* 288px */
 @media (max-width: 18em) {
 	/* navigation */
 
@@ -253,5 +431,26 @@ body {
 
 	.navigation .menu-nav ul li a {
 		margin-right: 0;
+	}
+
+	/* header section */
+
+	.text-box {
+		margin-bottom: 2rem;
+	}
+
+	.text-box h1 {
+		font-size: 2.6rem;
+	}
+
+	.text-box p {
+		font-size: 1.4rem;
+	}
+
+	.text-box a:link,
+	.text-box a:visited {
+		font-size: 1.6rem;
+		padding: 1rem 1.6rem;
+		margin-top: 1rem;
 	}
 }
