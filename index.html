@@ -22,19 +22,19 @@
 
     <nav class="navigation">
       <ul class="desktop-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Hire Us</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hire-us">Hire Us</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
 
       <div class="menu-nav">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Hire Us</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#hire-us">Hire Us</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
@@ -50,7 +50,7 @@
   <main class="container">
 
     <!-- section hero -->
-    <section class="section-hero">
+    <section id="home" class="section-hero">
       <div class="image-slider">
         <img class="slider-image" src="assests/graphics/hero-images/slide1.png" alt="slide 1">
       </div>
@@ -68,7 +68,7 @@
 
     <!-- section about us -->
 
-    <section class="section-about-us">
+    <section id="about-us" class="section-about-us">
       <h2>About Us</h2>
 
       <div class="about-text">
@@ -108,7 +108,7 @@
 
 
     <!-- section services -->
-    <section class="section-services">
+    <section id="services" class="section-services">
       <h2>Our Services</h2>
 
       <div class="cards">
@@ -183,10 +183,182 @@
       </div>
 
     </section>
+
+
+    <!-- section hire-us -->
+
+    <section id="hire-us" class="hire-us">
+      <h2>Hire Us</h2>
+
+      <form class="form">
+
+        <h3>Build a strong Online Identity</h3>
+        <div class="full-name">
+          <input type="text" id="full-name" required placeholder=" ">
+          <label for="full-name"><span>Full&nbsp;Name</span></label>
+        </div>
+
+        <div class="phone">
+          <input type="tel" id="phone" required placeholder=" ">
+          <label for="phone"><span>Phone&nbsp;Number</span></label>
+        </div>
+
+        <div class="email">
+          <input type="email" id="email" required placeholder=" ">
+          <label for="email"><span>Email</span></label>
+        </div>
+
+        <div class="book-services">
+          <select name="service" id="services" required>
+            <option disabled selected>-select services-</option>
+            <option value="Web-Development">Web Development</option>
+            <option value="Web-Design">Web Design</option>
+            <option value="App-Development">App Development</option>
+            <option value="Graphic-Design">Graphic Design</option>
+            <option value="UI/UX-Design">UI/UX Design</option>
+            <option value="Video-Editing">Video Editing</option>
+          </select>
+        </div>
+
+        <div class="submit">
+          <input type="submit" value="Book Now">
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+      </form>
+
+      <div class="form-img"></div>
+
+    </section>
+
+
+    <!-- section hire-us -->
+
+    <section class="testimonials">
+
+      <h2>Testimonials</h2>
+
+      <div class="stories">
+
+        <!-- testimonial 1 -->
+        <div class="story-panel">
+
+          <figure class="story-img">
+            <img src="assests/graphics/Testimonials/testimonial1.jpg" alt="testimonial-img">
+
+            <figcaption class="story-name">Rishi Sen</figcaption>
+          </figure>
+
+
+          <div class="testimonial-text">
+            <p>TechMasters Studio nailed our web development needs. Their team delivered a user-friendly and innovative
+              website, exceeding our expectations. Highly recommended for efficient and top-notch service!</p>
+
+            <div class="rating rating-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- testimonial 2 -->
+        <div class="story-panel">
+
+          <figure class="story-img">
+            <img src="assests/graphics/Testimonials/testimonial2.jpg" alt="testimonial-img">
+
+            <figcaption class="story-name">Adnan Hussain</figcaption>
+          </figure>
+
+
+          <div class="testimonial-text">
+            <p>There graphic design service is fantastic. They're creative, detail-oriented, and deliver standout
+              results. Highly recommended!</p>
+
+            <div class="rating rating-2">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- testimonial 3 -->
+        <div class="story-panel">
+
+          <figure class="story-img">
+            <img src="assests/graphics/Testimonials/testimonial3.jpg" alt="testimonial-img">
+
+            <figcaption class="story-name">Himanshu Sen</figcaption>
+          </figure>
+
+
+          <div class="testimonial-text">
+            <p>TechMasters Studio's editing expertise rescued our studio during staff shortages, saving time and
+              enhancing content quality. They're now our trusted choice for top-notch video editing.</p>
+
+            <div class="rating rating-3">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
   </main>
 
   <!-- footer -->
-  <!-- <footer></footer> -->
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="footer-contact-us">
+        <address class="contacts">
+
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+          <p>
+            <a class="footer-link" href="tel:415-201-6370">415-201-6370</a>
+            <br />
+            <a class="footer-link" href="mailto:hello@omnifood.com">hello@omnifood.com</a>
+          </p>
+        </address>
+      </div>
+
+      <div class="footer-quick-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Hire Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-tms">
+      <img src="assests/graphics/logos/Logo-black.png" alt="">
+
+      <p class="copyright">
+        Copyright &copy; <span class="year">2027</span> by TechMasters Studio, Inc.
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
 
 
   <script src="assests/javascript/script.js"></script>
